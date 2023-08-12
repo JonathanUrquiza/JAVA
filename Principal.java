@@ -8,7 +8,7 @@ public class Principal extends JFrame implements ActionListener {
     private JMenuBar mb;
     private JMenu menuOpciones, menuCalcular, menuAcercaDe, menuColorFondo;
     private JMenuItem miCaculo, miRojo, miNegro, miMorado, miElCreador, miSalir, miNuevo;
-    private JLabel labelLogo, labelBienvenido, labelTitle, labelNombre, labellApellido, labellAmaterno,
+    private JLabel labelLogo, labelBienvenido, labelTitle, labelNombre, labelApellido, labelAmaterno,
             labellDepartamento, labellAntiguedad, labellResultado, labellfooter;
     private JTextField txtNombreTrabajador, txtAPaternoTrabajador, txtAMaternoTrabajador;
     private JComboBox comboDepartamento, comboAntiguedad;
@@ -113,11 +113,11 @@ public class Principal extends JFrame implements ActionListener {
         txtNombreTrabajador.setForeground(new java.awt.Color(255, 0, 0));
         add(txtNombreTrabajador);
 
-        labellApellido = new JLabel("Apellido");
-        labellApellido.setBounds(25, 248, 180, 25);
-        labellApellido.setFont(new Font("Andale Mono", 1, 12));
-        labellApellido.setForeground(new Color(255, 255, 255));
-        add(labellApellido);
+        labelApellido = new JLabel("Apellido");
+        labelApellido.setBounds(25, 248, 180, 25);
+        labelApellido.setFont(new Font("Andale Mono", 1, 12));
+        labelApellido.setForeground(new Color(255, 255, 255));
+        add(labelApellido);
 
         txtAPaternoTrabajador = new JTextField();
         txtAPaternoTrabajador.setBounds(25, 273, 150, 25);
@@ -125,6 +125,27 @@ public class Principal extends JFrame implements ActionListener {
         txtAPaternoTrabajador.setFont(new java.awt.Font("Andale Mono", 1, 14));
         txtAPaternoTrabajador.setForeground(new java.awt.Color(255, 0, 0));
         add(txtAPaternoTrabajador);
+
+        labelAmaterno = new JLabel("Apellido Materno");
+        labelAmaterno.setBounds(25, 308, 180, 25);
+        labelAmaterno.setFont(new Font("Andale Mono", 1, 12));
+        labelAmaterno.setForeground(new Color(255, 255, 255));
+        add(labelAmaterno);
+
+        txtAMaternoTrabajador = new JTextField();
+        txtAMaternoTrabajador.setBounds(25, 334, 150, 25);
+        txtAMaternoTrabajador.setBackground(new java.awt.color(224, 224, 224));
+        txtAMaternoTrabajador.setFont(new java.awt.Font("Andale Mono", 1, 14));
+        txtAMaternoTrabajador.setForeground(new java.awt.Color(225, 0, 0));
+        add(txtAMaternoTrabajador);
+
+        labellDepartamento = new JLabel("Seleccione el Departamento");
+        labellDepartamento.setBounds(220, 188, 180, 25);
+        labellDepartamento.setFont(new Font("Andale Mono", 1, 12));
+        labellDepartamento.setForeground(new Color(255, 255, 255));
+        add(labellDepartamento);
+
+        comboDepartamento = new JComboBox();
 
     }
 
