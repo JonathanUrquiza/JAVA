@@ -226,19 +226,58 @@ public class Principal extends JFrame implements ActionListener {
                                 "\n quien trabaja en " + Departamento + " con " + Antiguedad +
                                 "\n recibe 14 días de vacaciones.");
                     }
+                    if (Antiguedad.equals("2 a 6 años de servicio")) {
+                        textarea1.setText(
+                                "\n El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                        "\n quien trabaja en " + Departamento + " con " + Antiguedad +
+                                        "\n recibe 14 días de vacaciones.");
+                    }
+                    if (Antiguedad.equals("7 años o m;ás de servicio")) {
+                        textarea1.setText(
+                                "\n El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                        "\n quien trabaja en " + Departamento + " con " + Antiguedad +
+                                        "\n recibe 20 días de vacaciones.");
+                    }
                 }
-                if (Antiguedad.equals("2 a 6 años de servicio")) {
-                    textarea1.setText(
-                            "\n El trabajador " + nombreTrabajador + " " + AP + " " + AM +
-                                    "\n quien trabaja en " + Departamento + " con " + Antiguedad +
-                                    "\n recibe 14 días de vacaciones.");
+                if (Departamento.equals("Departamento de logística")) {
+                    if (Antiguedad.equals("1 año de servicio")) {
+                        textarea1.setText("\n El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                "\n quien trabaja en " + Departamento + " con " + Antiguedad +
+                                "\n recibe 7 días de vacaciones.");
+                    }
+                    if (Antiguedad.equals("2 a 6 años de servicio")) {
+                        textarea1.setText(
+                                "\n El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                        "\n quien trabaja en " + Departamento + " con " + Antiguedad +
+                                        "\n recibe 15 días de vacaciones.");
+                    }
+                    if (Antiguedad.equals("7 años o m;ás de servicio")) {
+                        textarea1.setText(
+                                "\n El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                        "\n quien trabaja en " + Departamento + " con " + Antiguedad +
+                                        "\n recibe 22 días de vacaciones.");
+                    }
                 }
-                if (Antiguedad.equals("7 años o m;ás de servicio")) {
-                    textarea1.setText(
-                            "\n El trabajador " + nombreTrabajador + " " + AP + " " + AM +
-                                    "\n quien trabaja en " + Departamento + " con " + Antiguedad +
-                                    "\n recibe 20 días de vacaciones.");
+                if (Departamento.equals("Departamento de gerencia")) {
+                    if (Antiguedad.equals("1 año de servicio")) {
+                        textarea1.setText("\n El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                "\n quien trabaja en " + Departamento + " con " + Antiguedad +
+                                "\n recibe 10 días de vacaciones.");
+                    }
+                    if (Antiguedad.equals("2 a 6 años de servicio")) {
+                        textarea1.setText(
+                                "\n El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                        "\n quien trabaja en " + Departamento + " con " + Antiguedad +
+                                        "\n recibe 20 días de vacaciones.");
+                    }
+                    if (Antiguedad.equals("7 años o m;ás de servicio")) {
+                        textarea1.setText(
+                                "\n El trabajador " + nombreTrabajador + " " + AP + " " + AM +
+                                        "\n quien trabaja en " + Departamento + " con " + Antiguedad +
+                                        "\n recibe 30 días de vacaciones.");
+                    }
                 }
+
             }
         }
         if (e.getSource() == miRojo) {
