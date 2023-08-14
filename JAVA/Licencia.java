@@ -17,6 +17,7 @@ public class Licencia extends JFrame implements ActionListener, ChangeListener {
     public Licencia() {
         // Inicia la funcion constructora.
         setLayout(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Licencia de uso");// Asigna un titulo.
         setIconImage(new ImageIcon(getClass().getResource("../img\\icon.png")).getImage());
         Bienvenida ventanaBienvenida = new Bienvenida();

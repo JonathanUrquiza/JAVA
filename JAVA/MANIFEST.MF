@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Ceated-By: Jonathan Javier Urquiza
+Main-Class: Bienvenida.java
+X-CMMENT: Curso JAVA

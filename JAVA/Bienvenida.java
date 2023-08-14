@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class Bienvenida extends JFrame implements ActionListener {
 
     // llamar de las librerias los objetos con acceso privado.
-    private JTextField textField1;
+    private JTextField textfield1;
     private JLabel label1, label2, label3, label4, label5;
     private JButton boton1;
     public static String texto = "";
@@ -16,6 +16,7 @@ public class Bienvenida extends JFrame implements ActionListener {
     public Bienvenida() {
 
         setLayout(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Bienvenido");
         getContentPane().setBackground(new Color(255, 0, 0));// asigna el color al fondo de contenerdor.
         setIconImage(new ImageIcon(getClass().getResource("../img\\icon.png")).getImage());
@@ -57,12 +58,12 @@ public class Bienvenida extends JFrame implements ActionListener {
         label5.setForeground(new Color(255, 255, 255));
         add(label5);
 
-        textField1 = new JTextField();
-        textField1.setBounds(45, 240, 255, 25);
-        textField1.setBackground(new Color(224, 224, 224));
-        textField1.setFont(new Font("Andale Mono", 1, 14));
-        textField1.setForeground(new Color(255, 0, 0));
-        add(textField1);
+        textfield1 = new JTextField();
+        textfield1.setBounds(45, 240, 255, 25);
+        textfield1.setBackground(new Color(224, 224, 224));
+        textfield1.setFont(new Font("Andale Mono", 1, 14));
+        textfield1.setForeground(new Color(255, 0, 0));
+        add(textfield1);
 
         boton1 = new JButton("ingresar");
         boton1.setBounds(125, 280, 100, 30);
@@ -75,7 +76,7 @@ public class Bienvenida extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == boton1) {
-            texto = textField1.getText().trim();
+            texto = textfield1.getText().trim();
             if (texto.equals("")) {
                 JOptionPane.showMessageDialog(null, "Debes ingresar tu nombre.");
             } else {

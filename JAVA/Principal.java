@@ -19,6 +19,7 @@ public class Principal extends JFrame implements ActionListener {
 
     public Principal() {
         setLayout(null);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("Pantalla principal");
         getContentPane().setBackground(new Color(255, 0, 0));
         setIconImage(new ImageIcon(getClass().getResource("../img/icon.png")).getImage());
@@ -163,8 +164,8 @@ public class Principal extends JFrame implements ActionListener {
         comboDepartamento.setForeground(new java.awt.Color(255, 0, 0));
         add(comboDepartamento);
         comboDepartamento.addItem("");
-        comboDepartamento.addItem("Atenci;ón al Cliente");
-        comboDepartamento.addItem("Departamento de Log;óstica");
+        comboDepartamento.addItem("Atención al Cliente");
+        comboDepartamento.addItem("Departamento de Logística");
         comboDepartamento.addItem("Departamento de Gerencia");
 
         labelAntiguedad = new JLabel("Selecciona la Antigüedad:");
@@ -232,7 +233,7 @@ public class Principal extends JFrame implements ActionListener {
                                         "\n quien trabaja en " + Departamento + " con " + Antiguedad +
                                         "\n recibe 14 días de vacaciones.");
                     }
-                    if (Antiguedad.equals("7 años o m;ás de servicio")) {
+                    if (Antiguedad.equals("7 años o más de servicio")) {
                         textarea1.setText(
                                 "\n El trabajador " + nombreTrabajador + " " + AP + " " + AM +
                                         "\n quien trabaja en " + Departamento + " con " + Antiguedad +
@@ -251,7 +252,7 @@ public class Principal extends JFrame implements ActionListener {
                                         "\n quien trabaja en " + Departamento + " con " + Antiguedad +
                                         "\n recibe 15 días de vacaciones.");
                     }
-                    if (Antiguedad.equals("7 años o m;ás de servicio")) {
+                    if (Antiguedad.equals("7 años o más de servicio")) {
                         textarea1.setText(
                                 "\n El trabajador " + nombreTrabajador + " " + AP + " " + AM +
                                         "\n quien trabaja en " + Departamento + " con " + Antiguedad +
@@ -281,22 +282,33 @@ public class Principal extends JFrame implements ActionListener {
             }
         }
         if (e.getSource() == miRojo) {
-
+            getContentPane().setBackground(new Color(255, 0, 0));
         }
         if (e.getSource() == miNegro) {
-
+            getContentPane().setBackground(new Color(0, 0, 0));
         }
         if (e.getSource() == miMorado) {
-
+            getContentPane().setBackground(new Color(51, 0, 51));
         }
         if (e.getSource() == miNuevo) {
-
+            txtNombreTrabajador.setText("");
+            txtAPaternoTrabajador.setText("");
+            txtAMaternoTrabajador.setText("");
+            comboDepartamento.setSelectedIndex(0);
+            comboAntiguedad.setSelectedIndex(0);
+            textarea1.setText("\n Aqui pararece el resultado del cálculo de las vacaciones.");
         }
         if (e.getSource() == miSalir) {
-
+            Bienvenida ventBienvenida = new Bienvenida();
+            ventBienvenida.setBounds(0, 0, 350, 450);
+            ventBienvenida.setVisible(true);
+            ventBienvenida.setResizable(false);
+            ventBienvenida.setLocationRelativeTo(null);
+            this.setVisible(false);
         }
         if (e.getSource() == miElCreador) {
-
+            JOptionPane.showMessageDialog(null,
+                    "Desarrollado por Jonathan Javier Urquiza, desarollador javaScript, JAVA.");
         }
     }
 
